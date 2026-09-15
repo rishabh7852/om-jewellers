@@ -1295,7 +1295,7 @@ textarea {
 
   .hero__art {
     order: -1;
-    width: 46vw;
+    /* width: 46vw; */
     max-width: 220px;
   }
 
@@ -1364,4 +1364,42 @@ textarea {
   .ticker-bar__updated {
     display: none;
   }
+}
+
+@media (max-width: 767px) {
+  /* Mobile styles */
+
+ .hero__title {
+   font-size: 22px;
+  margin-bottom: 20px;
+}
+.hero__art {
+  max-width: 100%;
+}
+
+.hero__slide{
+      padding: 20px!important;
+}
+
+.header-actions__cta {
+ display: none;
+}
+.hero__art {
+  width: 100%!important;
+   
+}
+
+.hero__nav--prev {
+  left: 11px;
+}
+.hero__nav--next {
+  right: 11px;
+
+}
+
+.hero__nav {
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+}
 }
