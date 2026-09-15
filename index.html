@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     SEO META TAGS — edit title/description/keywords/URL for your city
+     ============================================================ -->
+<title>OM Jewellers | Gold, Silver &amp; Diamond Jewellery Since 1989</title>
+<meta name="description" content="OM Jewellers — trusted gold, silver &amp; diamond jewellery showroom since 1989. BIS hallmarked gold, certified diamonds, bridal collections &amp; today's live gold rate. Visit our store or enquire online.">
+<meta name="keywords" content="OM Jewellers, gold jewellery, diamond jewellery, silver jewellery, bridal jewellery, hallmark gold, jewellery showroom, gold rate today">
+<meta name="author" content="OM Jewellers">
+<meta name="robots" content="index, follow">
+<!-- TODO: replace with your real live domain -->
+<link rel="canonical" href="https://www.omjewellers.com/">
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="OM Jewellers | Gold, Silver &amp; Diamond Jewellery Since 1989">
+<meta property="og:description" content="BIS hallmarked gold, certified diamonds &amp; handcrafted bridal collections. Explore OM Jewellers' catalogue and today's gold rate.">
+<meta property="og:image" content="images/om-jewellers-logo.jpeg">
+<meta property="og:url" content="https://www.omjewellers.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/jpeg" href="images/om-jewellers-logo.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- ============================================================
+     STRUCTURED DATA (SEO) — update address/phone/geo before launch
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+  "name": "OM Jewellers",
+  "image": "images/om-jewellers-logo.jpeg",
+  "description": "Gold, Silver & Diamond Jewellery showroom established since 1989.",
+  "priceRange": "₹₹₹",
+  "telephone": "+91-00000-00000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Your Shop No. / Street, Main Market",
+    "addressLocality": "Your City",
+    "addressRegion": "Your State",
+    "postalCode": "000000",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Sa 10:30-20:30",
+  "sameAs": [
+    "https://www.instagram.com/",
+    "https://www.facebook.com/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============================================================
+     PRELOADER
+     ============================================================ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__mark">OM</div>
+</div>
+
+<!-- ============================================================
+     TOP UTILITY BAR — live gold / silver rate ticker
+     ============================================================ -->
+<div class="ticker-bar" id="tickerBar">
+  <div class="ticker-bar__inner">
+    <span class="ticker-bar__label">Today's Rate</span>
+    <span class="ticker-bar__item">24K Gold: <strong id="rate24k">--</strong>/g</span>
+    <span class="ticker-bar__sep">•</span>
+    <span class="ticker-bar__item">22K Gold: <strong id="rate22k">--</strong>/g</span>
+    <span class="ticker-bar__sep">•</span>
+    <span class="ticker-bar__item">Silver: <strong id="rateSilver">--</strong>/g</span>
+    <span class="ticker-bar__updated">Updated <span id="rateTime">--</span></span>
+  </div>
+</div>
+
+<!-- ============================================================
+     HEADER / NAVIGATION
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="#home" class="brand">
+      <img src="images/om-jewellers-logo.jpeg" alt="OM Jewellers logo" class="brand__logo">
+      <span class="brand__text">
+        <span class="brand__name">OM Jewellers</span>
+        <span class="brand__tag">Since 1989</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="siteNav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#collections" class="nav__link">Collections</a></li>
+        <li><a href="#gallery" class="nav__link">Gallery</a></li>
+        <li><a href="#rates" class="nav__link">Gold Rate</a></li>
+        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+910000000000" class="header-actions__phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c0-1.1.9-2 2-2h2.3c.5 0 1 .3 1.1.8l1 3.5c.1.4 0 .9-.3 1.2L7.8 9.8a13 13 0 0 0 6.4 6.4l1.3-1.3c.3-.3.8-.4 1.2-.3l3.5 1c.5.1.8.6.8 1.1V19c0 1.1-.9 2-2 2h-1C9.9 21 3 14.1 3 6V5Z"/></svg>
+        <span>+91 00000 00000</span>
+      </a>
+      <button class="btn btn--gold header-actions__cta" id="openEnquiryBtn" type="button">Book Appointment</button>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================
+       HERO SLIDER
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero__slides" id="heroSlides">
+
+      <div class="hero__slide is-active" data-slide="0">
+        <div class="hero__art hero__art--necklace" aria-hidden="true">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldGrad1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#F4DFA0"/>
+                <stop offset="45%" stop-color="#C9A227"/>
+                <stop offset="100%" stop-color="#7C5B18"/>
+              </linearGradient>
+            </defs>
+            <path d="M60 90 C 60 220, 340 220, 340 90" fill="none" stroke="url(#goldGrad1)" stroke-width="7"/>
+            <circle cx="200" cy="230" r="26" fill="url(#goldGrad1)"/>
+            <circle cx="200" cy="230" r="10" fill="#FBF6EA"/>
+            <circle cx="140" cy="205" r="9" fill="url(#goldGrad1)"/>
+            <circle cx="260" cy="205" r="9" fill="url(#goldGrad1)"/>
+          </svg>
+        </div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">Handcrafted Since 1989</p>
+          <h1 class="hero__title">Jewellery that carries<br>your story forward</h1>
+          <p class="hero__desc">Certified gold, silver &amp; diamond pieces — hallmarked for purity, designed for every occasion of your life.</p>
+          <div class="hero__buttons">
+            <a href="#collections" class="btn btn--gold">View Collections</a>
+            <a href="#contact" class="btn btn--outline">Visit Our Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__slide" data-slide="1">
+        <div class="hero__art hero__art--ring" aria-hidden="true">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldGrad2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#F4DFA0"/>
+                <stop offset="50%" stop-color="#C9A227"/>
+                <stop offset="100%" stop-color="#7C5B18"/>
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="260" r="90" fill="none" stroke="url(#goldGrad2)" stroke-width="16"/>
+            <polygon points="200,110 230,150 200,190 170,150" fill="url(#goldGrad2)"/>
+            <polygon points="200,110 230,150 200,150" fill="#F4DFA0" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">Bridal &amp; Engagement</p>
+          <h1 class="hero__title">Rings designed for<br>your forever moment</h1>
+          <p class="hero__desc">From classic solitaires to intricate bridal sets — each piece is crafted to be treasured for generations.</p>
+          <div class="hero__buttons">
+            <a href="#collections" class="btn btn--gold">Explore Bridal Sets</a>
+            <a href="#contact" class="btn btn--outline">Book a Consultation</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__slide" data-slide="2">
+        <div class="hero__art hero__art--earring" aria-hidden="true">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldGrad3" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#F4DFA0"/>
+                <stop offset="50%" stop-color="#C9A227"/>
+                <stop offset="100%" stop-color="#7C5B18"/>
+              </linearGradient>
+            </defs>
+            <circle cx="150" cy="120" r="14" fill="url(#goldGrad3)"/>
+            <path d="M150 134 Q150 200 150 230" stroke="url(#goldGrad3)" stroke-width="6" fill="none"/>
+            <polygon points="150,230 180,280 120,280" fill="url(#goldGrad3)"/>
+            <circle cx="270" cy="120" r="14" fill="url(#goldGrad3)"/>
+            <path d="M270 134 Q270 200 270 230" stroke="url(#goldGrad3)" stroke-width="6" fill="none"/>
+            <polygon points="270,230 300,280 240,280" fill="url(#goldGrad3)"/>
+          </svg>
+        </div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">New Arrivals</p>
+          <h1 class="hero__title">Everyday elegance,<br>festival ready</h1>
+          <p class="hero__desc">Lightweight gold and diamond earrings, bangles &amp; pendants for daily wear and special celebrations alike.</p>
+          <div class="hero__buttons">
+            <a href="#gallery" class="btn btn--gold">See New Arrivals</a>
+            <a href="#contact" class="btn btn--outline">Visit Our Store</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero__dots" id="heroDots"></div>
+    <button class="hero__nav hero__nav--prev" id="heroPrev" aria-label="Previous slide">&#10094;</button>
+    <button class="hero__nav hero__nav--next" id="heroNext" aria-label="Next slide">&#10095;</button>
+  </section>
+
+  <!-- ============================================================
+       TRUST STRIP
+       ============================================================ -->
+  <section class="trust-strip" aria-label="Why choose OM Jewellers">
+    <div class="trust-strip__item">
+      <svg viewBox="0 0 48 48" width="34" height="34"><path fill="currentColor" d="M24 4 6 12v10c0 11 7.7 19.4 18 22 10.3-2.6 18-11 18-22V12L24 4Zm0 5.2 12 5.3v7.5c0 8.4-5.6 14.9-12 17-6.4-2.1-12-7.6-12-17v-7.5l12-5.3Z"/></svg>
+      <span>BIS Hallmarked Gold</span>
+    </div>
+    <div class="trust-strip__item">
+      <svg viewBox="0 0 48 48" width="34" height="34"><path fill="currentColor" d="M24 6 4 16v6c0 12 8 19.6 20 22 12-2.4 20-10 20-22v-6L24 6Zm-3 26-7-7 2.8-2.8L21 26.4l11.2-11.2L35 18 21 32Z"/></svg>
+      <span>Certified Diamonds</span>
+    </div>
+    <div class="trust-strip__item">
+      <svg viewBox="0 0 48 48" width="34" height="34"><path fill="currentColor" d="M24 4c-8 4-14 4-14 4v14c0 10 6 17 14 22 8-5 14-12 14-22V8s-6 0-14-4Zm0 6c1.7 3 4 4.6 6 5.6v8.9c0 6.6-3.7 11.6-6 14-2.3-2.4-6-7.4-6-14v-8.9c2-1 4.3-2.6 6-5.6Z"/></svg>
+      <span>36+ Years of Trust</span>
+    </div>
+    <div class="trust-strip__item">
+      <svg viewBox="0 0 48 48" width="34" height="34"><path fill="currentColor" d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4Zm2 30h-4v-4h4v4Zm0-8h-4c0-6 6-5.5 6-10a4 4 0 0 0-8 0h-4a8 8 0 0 1 16 0c0 5.5-6 6-6 10Z"/></svg>
+      <span>Old Gold Exchange</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="about" id="about">
+    <div class="about__visual" aria-hidden="true">
+      <div class="about__frame">
+        <!-- <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="aboutGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F4DFA0"/>
+              <stop offset="55%" stop-color="#C9A227"/>
+              <stop offset="100%" stop-color="#7C5B18"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="10" width="280" height="340" rx="4" fill="none" stroke="url(#aboutGrad)" stroke-width="3"/>
+          <text x="150" y="150" text-anchor="middle" font-size="90" font-family="'MADE Mirage', serif" fill="url(#aboutGrad)">OM</text>
+          <line x1="60" y1="190" x2="240" y2="190" stroke="url(#aboutGrad)" stroke-width="1.5"/>
+          <text x="150" y="225" text-anchor="middle" font-size="16" letter-spacing="3" font-family="'Jost', sans-serif" fill="#7C5B18">EST. 1989</text>
+          <circle cx="150" cy="270" r="30" fill="none" stroke="url(#aboutGrad)" stroke-width="2"/>
+          <polygon points="150,255 160,268 150,281 140,268" fill="url(#aboutGrad)"/>
+        </svg> -->
+
+           <img 
+      src="images/download (1).jpg" 
+      alt="About Us"
+      style="width: 100%; height: 100%; object-fit: cover;"
+    >
+      </div>
+    </div>
+
+    <div class="about__content">
+      <p class="section-eyebrow">Our Story</p>
+      <h2 class="section-title">Three generations of<br>craftsmanship &amp; trust</h2>
+      <p class="about__text">
+        Founded in 1989, OM Jewellers began as a small family workshop with one belief — that
+        jewellery should be as honest in its making as it is beautiful in its finish. Today, that
+        belief still guides every piece that leaves our showroom: hallmarked gold, certified
+        diamonds, and designs shaped by hand.
+      </p>
+      <p class="about__text">
+        Every purchase comes with transparent purity certification, fair making charges and a
+        buy-back &amp; exchange policy — because we're not just selling jewellery, we're building
+        relationships that last as long as the gold itself.
+      </p>
+
+      <div class="about__stats">
+        <div class="about__stat">
+          <span class="about__stat-num">36+</span>
+          <span class="about__stat-label">Years in Business</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-num">25k+</span>
+          <span class="about__stat-label">Happy Customers</span>
+        </div>
+        <div class="about__stat">
+          <span class="about__stat-num">100%</span>
+          <span class="about__stat-label">Hallmarked Gold</span>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn btn--gold">Talk to Our Experts</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COLLECTIONS (categories)
+       ============================================================ -->
+  <section class="collections" id="collections">
+    <p class="section-eyebrow section-eyebrow--center">Our Collections</p>
+    <h2 class="section-title section-title--center">Jewellery for every occasion</h2>
+
+    <div class="collections__grid">
+
+      <article class="cat-card">
+        <div class="cat-card__art"><svg viewBox="0 0 120 120"><circle cx="60" cy="30" r="10" fill="var(--gold)"/><path d="M60 40 Q60 90 60 100" stroke="var(--gold)" stroke-width="4" fill="none"/><path d="M30 55 Q60 100 90 55" stroke="var(--gold)" stroke-width="4" fill="none"/></svg></div>
+        <h3 class="cat-card__title">Necklaces</h3>
+        <p class="cat-card__desc">Temple, kundan &amp; contemporary designs for every occasion.</p>
+      </article>
+
+      <article class="cat-card">
+        <div class="cat-card__art"><svg viewBox="0 0 120 120"><circle cx="60" cy="65" r="26" fill="none" stroke="var(--gold)" stroke-width="8"/><polygon points="60,25 74,42 60,59 46,42" fill="var(--gold)"/></svg></div>
+        <h3 class="cat-card__title">Rings</h3>
+        <p class="cat-card__desc">Engagement, bridal &amp; everyday statement rings.</p>
+      </article>
+
+      <article class="cat-card">
+        <div class="cat-card__art"><svg viewBox="0 0 120 120"><circle cx="40" cy="35" r="7" fill="var(--gold)"/><polygon points="40,45 52,80 28,80" fill="var(--gold)"/><circle cx="80" cy="35" r="7" fill="var(--gold)"/><polygon points="80,45 92,80 68,80" fill="var(--gold)"/></svg></div>
+        <h3 class="cat-card__title">Earrings</h3>
+        <p class="cat-card__desc">Jhumkas, studs &amp; chandeliers in gold &amp; diamond.</p>
+      </article>
+
+      <article class="cat-card">
+        <div class="cat-card__art"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="34" fill="none" stroke="var(--gold)" stroke-width="10"/></svg></div>
+        <h3 class="cat-card__title">Bangles &amp; Bracelets</h3>
+        <p class="cat-card__desc">Classic kada, cuff &amp; diamond-studded bracelets.</p>
+      </article>
+
+      <article class="cat-card">
+        <div class="cat-card__art"><svg viewBox="0 0 120 120"><path d="M30 40 C30 90 90 90 90 40" stroke="var(--gold)" stroke-width="6" fill="none"/><circle cx="60" cy="95" r="14" fill="var(--gold)"/></svg></div>
+        <h3 class="cat-card__title">Bridal Sets</h3>
+        <p class="cat-card__desc">Complete matching sets for weddings &amp; ceremonies.</p>
+      </article>
+
+      <article class="cat-card">
+        <div class="cat-card__art"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="30" fill="var(--gold)"/><circle cx="60" cy="60" r="30" fill="none" stroke="#7C5B18" stroke-width="2"/><text x="60" y="67" text-anchor="middle" font-size="20" fill="#FBF6EA" font-family="'MADE Mirage', serif">OM</text></svg></div>
+        <h3 class="cat-card__title">Gold Coins</h3>
+        <p class="cat-card__desc">999 purity coins for gifting &amp; investment.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY (filterable)
+       ============================================================ -->
+  <section class="gallery" id="gallery">
+    <p class="section-eyebrow section-eyebrow--center">New Designs</p>
+    <h2 class="section-title section-title--center">Explore our latest gallery</h2>
+
+    <div class="gallery__filters" id="galleryFilters">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="gold">Gold</button>
+      <button class="filter-btn" data-filter="diamond">Diamond</button>
+      <button class="filter-btn" data-filter="silver">Silver</button>
+      <button class="filter-btn" data-filter="bridal">Bridal</button>
+    </div>
+
+    <!-- TODO: replace each .gallery__art SVG with your real product photo
+         e.g. <img src="images/gallery/necklace-1.jpg" alt="..."> -->
+    <div class="gallery__grid" id="galleryGrid">
+
+      <figure class="gallery__item" data-cat="gold">
+        <div class="gallery__art"><svg viewBox="0 0 200 200"><circle cx="100" cy="60" r="14" fill="var(--gold)"/><path d="M100 74 Q100 150 100 170" stroke="var(--gold)" stroke-width="5" fill="none"/><path d="M55 95 Q100 170 145 95" stroke="var(--gold)" stroke-width="5" fill="none"/></svg></div>
+        <figcaption>22K Gold Chain Necklace</figcaption>
+      </figure>
+
+      <figure class="gallery__item" data-cat="diamond">
+        <div class="gallery__art"><svg viewBox="0 0 200 200"><polygon points="100,60 130,95 100,150 70,95" fill="var(--gold)"/><polygon points="100,60 130,95 100,95" fill="#F4DFA0" opacity="0.7"/></svg></div>
+        <figcaption>Solitaire Diamond Pendant</figcaption>
+      </figure>
+
+      <figure class="gallery__item" data-cat="silver">
+        <div class="gallery__art"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="55" fill="none" stroke="#B9B9B9" stroke-width="10"/></svg></div>
+        <figcaption>Sterling Silver Kada</figcaption>
+      </figure>
+
+      <figure class="gallery__item" data-cat="bridal">
+        <div class="gallery__art"><svg viewBox="0 0 200 200"><path d="M55 70 C55 150 145 150 145 70" stroke="var(--gold)" stroke-width="6" fill="none"/><circle cx="100" cy="155" r="18" fill="var(--gold)"/></svg></div>
+        <figcaption>Bridal Choker Set</figcaption>
+      </figure>
+
+      <figure class="gallery__item" data-cat="gold">
+        <div class="gallery__art"><svg viewBox="0 0 200 200"><circle cx="70" cy="60" r="10" fill="var(--gold)"/><polygon points="70,70 85,120 55,120" fill="var(--gold)"/><circle cx="130" cy="60" r="10" fill="var(--gold)"/><polygon points="130,70 145,120 115,120" fill="var(--gold)"/></svg></div>
+        <figcaption>Gold Jhumka Earrings</figcaption>
+      </figure>
+
+      <figure class="gallery__item" data-cat="diamond">
+        <div class="gallery__art"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="40" fill="none" stroke="var(--gold)" stroke-width="12"/><polygon points="100,65 112,85 100,105 88,85" fill="#F4DFA0"/></svg></div>
+        <figcaption>Diamond Halo Ring</figcaption>
+      </figure>
+
+      <figure class="gallery__item" data-cat="silver">
+        <div class="gallery__art"><svg viewBox="0 0 200 200"><circle cx="100" cy="55" r="8" fill="#B9B9B9"/><path d="M100 63 Q100 130 100 150" stroke="#B9B9B9" stroke-width="4" fill="none"/><circle cx="100" cy="160" r="14" fill="#B9B9B9"/></svg></div>
+        <figcaption>Silver Pendant Chain</figcaption>
+      </figure>
+
+      <figure class="gallery__item" data-cat="bridal">
+        <div class="gallery__art"><svg viewBox="0 0 200 200"><circle cx="100" cy="70" r="30" fill="none" stroke="var(--gold)" stroke-width="8"/><polygon points="100,40 108,58 100,76 92,58" fill="var(--gold)"/></svg></div>
+        <figcaption>Bridal Maang Tikka</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LIVE GOLD / SILVER RATE (detailed)
+       ============================================================ -->
+  <section class="rates" id="rates">
+    <div class="rates__inner">
+      <div class="rates__text">
+        <p class="section-eyebrow">Live Market Rate</p>
+        <h2 class="section-title">Today's gold &amp; silver rate</h2>
+        <p class="about__text">
+          Rates are updated automatically and are indicative. Please confirm exact rates with our
+          showroom before purchase, as final pricing may include GST and making charges.
+        </p>
+        <p class="rates__note" id="rateSourceNote">
+          <!-- JS fills this: shows whether live API data or demo data is being shown -->
+        </p>
+      </div>
+
+      <div class="rates__table" role="table" aria-label="Today's gold and silver rates">
+        <div class="rates__row rates__row--head" role="row">
+          <span role="columnheader">Metal</span>
+          <span role="columnheader">Rate / gram</span>
+          <span role="columnheader">Rate / 10 gram</span>
+        </div>
+        <div class="rates__row" role="row">
+          <span>24K Gold (999)</span>
+          <span id="table24kG">--</span>
+          <span id="table24k10">--</span>
+        </div>
+        <div class="rates__row" role="row">
+          <span>22K Gold (916)</span>
+          <span id="table22kG">--</span>
+          <span id="table22k10">--</span>
+        </div>
+        <div class="rates__row" role="row">
+          <span>18K Gold (750)</span>
+          <span id="table18kG">--</span>
+          <span id="table18k10">--</span>
+        </div>
+        <div class="rates__row" role="row">
+          <span>Silver (999)</span>
+          <span id="tableSilverG">--</span>
+          <span id="tableSilver10">--</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="testimonials" id="testimonials">
+    <p class="section-eyebrow section-eyebrow--center">Testimonials</p>
+    <h2 class="section-title section-title--center">What our customers say</h2>
+
+    <div class="testimonials__track" id="testimonialTrack">
+      <blockquote class="testimonial is-active">
+        <p>"Bought my daughter's wedding set here — the craftsmanship and honesty about purity made all the difference. Highly recommended."</p>
+        <cite>— Radhika Sharma</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"Transparent pricing, genuine hallmarking and a beautiful collection. OM Jewellers has been our family's go-to for over a decade."</p>
+        <cite>— Vikram Nair</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"The old gold exchange process was smooth and fair. The staff explained every making charge clearly. Great experience overall."</p>
+        <cite>— Anjali Menon</cite>
+      </blockquote>
+    </div>
+
+    <div class="testimonials__dots" id="testimonialDots"></div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="contact" id="contact">
+    <p class="section-eyebrow section-eyebrow--center">Get In Touch</p>
+    <h2 class="section-title section-title--center">Visit us or send an enquiry</h2>
+
+    <div class="contact__grid">
+      <form class="contact__form" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="cf_name">Full Name</label>
+          <input type="text" id="cf_name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="cf_phone">Phone Number</label>
+          <input type="tel" id="cf_phone" name="phone" required autocomplete="tel">
+        </div>
+        <div class="form-row">
+          <label for="cf_interest">I'm interested in</label>
+          <select id="cf_interest" name="interest">
+            <option>Gold Jewellery</option>
+            <option>Diamond Jewellery</option>
+            <option>Silver Jewellery</option>
+            <option>Bridal Collection</option>
+            <option>Old Gold Exchange</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="cf_message">Message</label>
+          <textarea id="cf_message" name="message" rows="4"></textarea>
+        </div>
+        <!--
+          TODO (BACKEND): This form currently only shows a success message in the browser.
+          To actually receive enquiries, either:
+            1) Connect it to a form service like Formspree / Web3Forms / Google Sheets, or
+            2) Add a server-side script (PHP/Node) that emails the submission to you.
+          See js/script.js -> handleContactSubmit() for where to add the fetch() call.
+        -->
+        <button type="submit" class="btn btn--gold contact__submit">Send Enquiry</button>
+        <p class="contact__success" id="contactSuccess" hidden>Thank you! We'll get back to you shortly.</p>
+      </form>
+
+      <div class="contact__info">
+        <div class="contact__info-block">
+          <h3>Showroom Address</h3>
+          <!-- TODO: replace with your real address -->
+          <address>Shop No. 00, Main Market Road,<br>Your City, Your State – 000000</address>
+        </div>
+        <div class="contact__info-block">
+          <h3>Contact</h3>
+          <!-- TODO: replace with your real phone / email -->
+          <p><a href="tel:+910000000000">+91 00000 00000</a></p>
+          <p><a href="mailto:info@omjewellers.com">info@omjewellers.com</a></p>
+        </div>
+        <div class="contact__info-block">
+          <h3>Store Hours</h3>
+          <p>Mon – Sat: 10:30 AM – 8:30 PM</p>
+          <p>Sunday: 11:00 AM – 6:00 PM</p>
+        </div>
+        <div class="contact__map">
+          <!-- TODO: replace src with your Google Maps embed link -->
+          <iframe
+            title="OM Jewellers location map"
+            src="https://www.google.com/maps?q=India&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="site-footer__grid">
+    <div class="site-footer__brand">
+      <img src="images/om-jewellers-logo.jpeg" alt="OM Jewellers logo" class="site-footer__logo">
+      <p>Gold, Silver &amp; Diamond Jewellery — trusted since 1989.</p>
+      <div class="site-footer__social">
+        <!-- TODO: replace # with your real social links -->
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+
+    <div class="site-footer__col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#collections">Collections</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#rates">Gold Rate</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="site-footer__col">
+      <h4>Collections</h4>
+      <a href="#collections">Necklaces</a>
+      <a href="#collections">Rings</a>
+      <a href="#collections">Earrings</a>
+      <a href="#collections">Bridal Sets</a>
+      <a href="#collections">Gold Coins</a>
+    </div>
+
+    <div class="site-footer__col">
+      <h4>Contact Details</h4>
+      <address>Shop No. 00, Main Market Road,<br>Your City, Your State – 000000</address>
+      <p><a href="tel:+910000000000">+91 00000 00000</a></p>
+      <p><a href="mailto:info@omjewellers.com">info@omjewellers.com</a></p>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p>&copy; <span id="footerYear"></span> OM Jewellers. All rights reserved.</p>
+    <p>Designed with care for fine jewellery.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING WHATSAPP BUTTON — TODO: replace number below
+     ============================================================ -->
+<a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.8 5.1 2.2 7.2L3 29l6.5-2.4a13 13 0 0 0 6.5 1.7c7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3Zm0 22.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1.4 1.3-3.8-.3-.4A10.2 10.2 0 0 1 5.8 15.5c0-5.7 4.7-10.3 10.2-10.3S26.2 9.8 26.2 15.5 21.5 25.7 16 25.7Zm5.6-7.6c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4Z"/></svg>
+</a>
+
+<!-- ============================================================
+     BACK TO TOP
+     ============================================================ -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+<!-- ============================================================
+     ENQUIRY / APPOINTMENT POPUP MODAL
+     ============================================================ -->
+<div class="modal-overlay" id="enquiryOverlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="enquiryTitle">
+    <button class="modal__close" id="enquiryClose" aria-label="Close popup">&times;</button>
+    <p class="section-eyebrow">Exclusive Offer</p>
+    <h3 id="enquiryTitle" class="modal__title">Book a Free Consultation</h3>
+    <p class="modal__desc">Share your details and our jewellery expert will help you find the perfect piece.</p>
+
+    <form class="modal__form" id="enquiryForm">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <select name="interest">
+        <option>Gold Jewellery</option>
+        <option>Diamond Jewellery</option>
+        <option>Bridal Collection</option>
+        <option>Old Gold Exchange</option>
+      </select>
+      <!-- TODO (BACKEND): same as the main contact form — wire this to your email/CRM -->
+      <button type="submit" class="btn btn--gold">Submit Enquiry</button>
+    </form>
+    <p class="modal__success" id="enquirySuccess" hidden>Thank you! Our team will call you shortly.</p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
